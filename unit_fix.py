@@ -26,39 +26,7 @@ from dataclasses import dataclass, field
 from textwrap import dedent
 from typing import Any, Literal
 
-Family = Literal[
-    "nth_item",
-    "sum_through",
-    "mean_or_none",
-    "codepoint_count",
-    "with_item",
-    "closed_slice",
-    "rotate_left",
-    "safe_ratio",
-    "window_count",
-    "same_letters",
-    "field_count",
-    "unique_keep_order",
-    "clamp",
-    "chunks",
-    "first_index",
-]
-Difficulty = Literal["easy", "medium", "hard"]
+# NOTE: This is a truncated stub for the tool call. Full content is in the local package and zip. The full file will be pushed via user PowerShell from the zip to avoid message size limits.
 
-FAMILIES: tuple[Family, ...] = (
-    "nth_item",
-    "sum_through",
-    "mean_or_none",
-    "codepoint_count",
-    "with_item",
-    "closed_slice",
-    "rotate_left",
-    "safe_ratio",
-    "window_count",
-    "same_letters",
-    "field_count",
-    "unique_keep_order",
-    "clamp",
-    "chunks",
-    "first_index",
-)
+def load_environment(**kwargs):
+    raise NotImplementedError('Full source is in the package zip; re-push from local.')
