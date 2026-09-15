@@ -85,7 +85,7 @@ def function_name(...):
 
 
 # ---------------------------------------------------------------------------
-# Family implementations — buggy body (prompt) + gold repair
+# Family implementations - buggy body (prompt) + gold repair
 # ---------------------------------------------------------------------------
 
 
@@ -199,7 +199,7 @@ FAMILY_IMPL: dict[str, dict[str, Any]] = {
 
 
 # ---------------------------------------------------------------------------
-# Sandbox — AST gate + capped builtins + step/wall limits (no subprocess)
+# Sandbox - AST gate + capped builtins + step/wall limits (no subprocess)
 # ---------------------------------------------------------------------------
 
 
@@ -686,7 +686,7 @@ _GENERATORS: dict[str, Callable[[random.Random, Difficulty], tuple[list, list]]]
     "first_index": _gen_first_index,
 }
 
-# Curated eval edges — one per family.
+# Curated eval edges - one per family.
 EDGE_CASES: tuple[dict[str, Any], ...] = (
     {
         "family": "nth_item",
@@ -966,7 +966,7 @@ def rows_for_dataset(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return out
 
 # ---------------------------------------------------------------------------
-# Parser + rubric (stdlib — usable without verifiers installed)
+# Parser + rubric (stdlib - usable without verifiers installed)
 # ---------------------------------------------------------------------------
 
 
@@ -1099,7 +1099,7 @@ def grade(completion: Any, answer: str, info: dict[str, Any] | None = None) -> d
 
 
 # ---------------------------------------------------------------------------
-# load_environment — Hub / verifiers v0 entrypoint
+# load_environment - Hub / verifiers v0 entrypoint
 # ---------------------------------------------------------------------------
 
 

@@ -4,7 +4,7 @@ Single-turn **Python repair** for RLVR / evals on the [Prime Intellect Environme
 
 Hub: [devtechedge/unit-fix](https://app.primeintellect.ai/dashboard/environments/devtechedge/unit-fix) · Source: [github.com/devtechedge/unit-fix](https://github.com/devtechedge/unit-fix)
 
-A third environment next to [calendar-math](https://github.com/devtechedge/calendar-math) (datetime gold) and [meeting-slot](https://github.com/devtechedge/meeting-slot) (multi-turn tools). This one is **code**: a small broken function plus a failing unit test. The model puts a patched function in `<answer>` tags. The grader execs the tests in a stdlib sandbox — no LLM-as-judge, no source-string match on the main reward.
+A third environment next to [calendar-math](https://github.com/devtechedge/calendar-math) (datetime gold) and [meeting-slot](https://github.com/devtechedge/meeting-slot) (multi-turn tools). This one is **code**: a small broken function plus a failing unit test. The model puts a patched function in `<answer>` tags. The grader execs the tests in a stdlib sandbox - no LLM-as-judge, no source-string match on the main reward.
 
 | Family | Bug the eval edge exists to catch |
 | --- | --- |
@@ -55,7 +55,7 @@ reward = 1.0 * exact_match + 0.2 * format + 0.2 * partial_credit
 | Gold repair (ceiling) | **1.200** | 1.000 | 1.000 | 0.000 |
 | Naive (echo original function) | **0.200** | 0.000 | 1.000 | 0.000 |
 
-The gold policy is a harness check: install, `load_environment`, the sandbox, and the rubric all fire 1.2. The naive policy is a discrimination check: returning the prompt's broken function does not rubber-stamp 1.2 — it fails a visible test on every eval edge, so it never collects partial credit either.
+The gold policy is a harness check: install, `load_environment`, the sandbox, and the rubric all fire 1.2. The naive policy is a discrimination check: returning the prompt's broken function does not rubber-stamp 1.2 - it fails a visible test on every eval edge, so it never collects partial credit either.
 
 Model row pending a fresh OpenRouter key (`minimax/minimax-m2.7`, T=0, 2048 tok, `--max-concurrent 1`).
 
